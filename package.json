@@ -1,0 +1,85 @@
+{
+  "name": "subs",
+  "displayName": "Subs",
+  "description": "See what your AI agents are doing in real time. Live panels for every Claude Code sub-agent with streaming output, tool calls, token stats, and results.",
+  "version": "0.1.0",
+  "publisher": "OmryHazak",
+  "license": "MIT",
+  "icon": "images/subs-icon_256.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omryhazak/subs"
+  },
+  "bugs": {
+    "url": "https://github.com/omryhazak/subs/issues"
+  },
+  "homepage": "https://github.com/omryhazak/subs#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "sub-agent",
+    "ai-agent",
+    "anthropic",
+    "agent-viewer",
+    "task-viewer",
+    "parallel-agents",
+    "llm",
+    "developer-tools",
+    "subs"
+  ],
+  "galleryBanner": {
+    "color": "#222224",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "subs.start",
+        "title": "Subs: Start Watching"
+      },
+      {
+        "command": "subs.stop",
+        "title": "Subs: Stop Watching"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "package": "vsce package",
+    "deploy": "vsce publish",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@vscode/vsce": "^3.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "globals": "^15.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
