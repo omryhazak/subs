@@ -5,8 +5,12 @@
 <h1 align="center">Subs</h1>
 
 <p align="center">
-  <strong>Streaming panels for every AI coding sub-agent.</strong><br />
+  <strong>Streaming panels for every Claude Code sub-agent.</strong><br />
   Stop guessing what your agents are doing. Watch them work in real time.
+</p>
+
+<p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=OmryHazak.subs"><img src="https://img.shields.io/badge/VS%20Code-Install%20from%20Marketplace-blue?style=for-the-badge&logo=visualstudiocode" alt="Install from Marketplace" /></a>
 </p>
 
 <p align="center">
@@ -15,7 +19,10 @@
 
 ---
 
-When AI coding agents spawn parallel sub-agents, they work invisibly. You wait. You hope. You get a summary at the end.
+To all the people who hate working in the terminal.<br>
+To all the people who love working with Claude Code.<br>
+To all the people frustrated from getting lost tracking sub-agents.<br>
+**This one is for you.**
 
 **Subs cracks open the black box.** Every sub-agent gets its own real-time panel, streaming tool calls, reasoning, and results as they happen.
 
@@ -26,7 +33,7 @@ When AI coding agents spawn parallel sub-agents, they work invisibly. You wait. 
 ## Quick Start
 
 1. Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=OmryHazak.subs) or run `ext install OmryHazak.subs`
-2. Open an AI coding agent session in VS Code
+2. Open a Claude Code session in VS Code
 3. When a sub-agent spawns, its panel appears automatically
 
 That's it. No configuration needed.
@@ -71,7 +78,7 @@ The extension auto-starts on launch -- you shouldn't need these.
 
 ## How It Works
 
-AI coding agents write sub-agent transcripts as JSONL files in a temp directory. Subs watches for new `.output` files, opens a webview panel for each one, and incrementally parses new bytes every 400ms. When no new data appears for 5 seconds, the agent is marked as done.
+Claude Code writes sub-agent transcripts as JSONL files in a temp directory. Subs watches for new `.output` files, opens a webview panel for each one, and incrementally parses new bytes every 400ms. When no new data appears for 5 seconds, the agent is marked as done.
 
 Up to 20 concurrent panels. All file I/O is async. Nonce-based CSP. No `innerHTML`.
 
